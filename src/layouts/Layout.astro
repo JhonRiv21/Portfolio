@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Header from "../components/Header.astro";
 ---
 <!doctype html>
 <html lang="en">
@@ -10,14 +11,18 @@ import "../styles/global.css";
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body>
-		<slot />
+	<body class="p-5 bg-[#0D121E] text-[#F5F5F5] space-y-28 sm:space-y-40">
+		<Header />
+		<main class="max-w-screen-2xl mx-auto py-5">
+			<slot />
+		</main>
 	</body>
 </html>
 
 <style>
 	html,
 	body {
+		font-family: "Basis Grotesque Pro", "sans-serif";
 		margin: 0;
 		width: 100%;
 		height: 100%;

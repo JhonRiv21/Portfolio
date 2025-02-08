@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: "Basis Grotesque Pro";
+    src: url("/fonts/BasisGrotesquePro-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+  }
