@@ -6,11 +6,13 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "scrape": "node scripts/scraper.js"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.4",
     "astro": "^5.2.5",
+    "puppeteer": "^24.2.0",
     "tailwindcss": "^4.0.4"
   }
 }
