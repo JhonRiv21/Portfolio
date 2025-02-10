@@ -61,19 +61,26 @@ const COOKIES_PATH = 'cookies.json';
         await new Promise(resolve => setTimeout(resolve, 3000));
 
         console.log('Extrayendo datos...');
+
         const recommendations = await page.evaluate(() => {
             return Array.from(document.querySelectorAll('.pvs-list__paged-list-item')).map(rec => {
+                const photo = rec.querySelector('.ivm-view-attr__img--centered')?.getAttribute('src') || 'Sin imagen';
                 const author = rec.querySelector('.t-bold')?.innerText.split('\n')[0].trim() || 'Desconocido';
-                const position = rec.querySelector('.t-14.t-normal:not(.t-black--light)')?.innerText.trim() || 'Sin cargo';
+        
+                const positionElement = rec.querySelector('.t-14.t-normal span[aria-hidden="true"]');
+                const position = positionElement ? positionElement.innerText.trim() : 'Sin cargo';
+        
+                const textElement = rec.querySelector('.t-14.t-normal.t-black span:not([aria-hidden])');
+                const text = textElement ? textElement.innerText.trim() : 'Sin contenido';
+        
                 const dateElement = Array.from(rec.querySelectorAll('.t-14.t-normal.t-black--light'))
                     .find(el => el.innerText.includes('supervisaba directamente') || el.innerText.includes('trabajó con'));
-
+        
                 const date = dateElement ? dateElement.innerText.split(',')[0].replace('El ', '').trim() : 'Fecha no disponible';
-                const text = rec.querySelector('.t-14.t-normal.t-black span')?.innerText.trim() || 'Sin contenido';
-
-                return { author, position, date, text };
+        
+                return { photo, author, position, date, text };
             });
-        });
+        });        
 
         console.log(`Recomendaciones recibidas obtenidas: ${recommendations.length}`);
         fs.writeFileSync(path.join('public', 'recommendations.json'), JSON.stringify(recommendations, null, 2));
