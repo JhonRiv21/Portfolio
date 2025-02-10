@@ -9,6 +9,15 @@ import BriefCaseIcon from "../assets/icons-svg/briefcase.astro"
 import LinkTicLogo from "../assets/linktic.svg"
 import WimbuLogo from '../assets/wimbu.svg'
 
+import JavascriptLogo from '../assets/js.svg'
+import TypescriptLogo from '../assets/ts.svg'
+import SveltekitLogo from '../assets/svelte.svg'
+import VueLogo from '../assets/vue.svg'
+import AstroLogo from '../assets/astro.svg'
+import ReactLogo from '../assets/react.svg'
+import TailwindLogo from '../assets/tailwind.svg'
+import SupabaseLogo from '../assets/supabase.svg'
+
 export const skills = [
 	{
 		icon: LanguagesIcon,
@@ -70,4 +79,39 @@ export const recomendaciones = [
         date: '29 DE SEPTIEMBRE DE 2022, PABLO TRABAJABA CON JHON',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
     }
+]
+
+export const habilitiesCarousel = [
+	{
+		icon: JavascriptLogo,
+		text: 'JAVASCRIPT'
+	},
+	{
+		icon: TypescriptLogo,
+		text: 'TYPESCRIPT'
+	},
+	{
+		icon: SveltekitLogo,
+		text: 'SVELTEKIT'
+	},
+	{
+		icon: VueLogo,
+		text: 'VUE'
+	},
+	{
+		icon: AstroLogo,
+		text: 'ASTRO'
+	},
+	{
+		icon: ReactLogo,
+		text: 'REACT'
+	},
+	{
+		icon: TailwindLogo,
+		text: 'TAILWIND'
+	},
+	{
+		icon: SupabaseLogo,
+		text: 'SUPABASE'
+	}
 ]
