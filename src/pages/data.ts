@@ -9,14 +9,14 @@ import BriefCaseIcon from "../assets/icons-svg/briefcase.astro"
 import LinkTicLogo from "../assets/linktic.svg"
 import WimbuLogo from '../assets/wimbu.svg'
 
-import JavascriptLogo from '../assets/js.svg'
-import TypescriptLogo from '../assets/ts.svg'
-import SveltekitLogo from '../assets/svelte.svg'
-import VueLogo from '../assets/vue.svg'
-import AstroLogo from '../assets/astro.svg'
-import ReactLogo from '../assets/react.svg'
-import TailwindLogo from '../assets/tailwind.svg'
-import SupabaseLogo from '../assets/supabase.svg'
+import JavascriptLogo from '../assets/icons-svg/javascript.astro'
+import TypescriptLogo from '../assets/icons-svg/typescript.astro'
+import SveltekitLogo from '../assets/icons-svg/sveltekit.astro'
+import VueLogo from '../assets/icons-svg/vue.astro'
+import AstroLogo from '../assets/icons-svg/astro.astro'
+import ReactLogo from '../assets/icons-svg/reactbig.astro'
+import TailwindLogo from '../assets/icons-svg/tailwindcss.astro'
+import SupabaseLogo from '../assets/icons-svg/supabase.astro'
 
 export const skills = [
 	{
