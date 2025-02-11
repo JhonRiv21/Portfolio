@@ -7,12 +7,19 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "scrape": "node scripts/scraper.js"
+    "lint": "standard"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.4",
     "astro": "^5.2.5",
     "puppeteer": "^24.2.0",
     "tailwindcss": "^4.0.4"
+  },
+  "devDependencies": {
+    "standard": "^17.1.2",
+    "scrape": "node scripts/scraper.js"
+  },
+    "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
   }
 }
