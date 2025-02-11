@@ -17,6 +17,7 @@ import AstroLogo from '../assets/icons-svg/astro.astro'
 import ReactLogo from '../assets/icons-svg/reactbig.astro'
 import TailwindLogo from '../assets/icons-svg/tailwindcss.astro'
 import SupabaseLogo from '../assets/icons-svg/supabase.astro'
+import NodeJsLogo from '../assets/icons-svg/nodejs.astro'
 
 export const skills = [
 	{
@@ -104,5 +105,9 @@ export const habilitiesCarousel = [
 	{
 		icon: SupabaseLogo,
 		text: 'SUPABASE'
+	},
+	{
+		icon: NodeJsLogo,
+		text: 'NODEJS'
 	}
 ]

@@ -1,52 +1,82 @@
 .carousel-container {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    opacity: 80%;
-    padding: 10px 0px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  opacity: 80%;
+  padding: 10px 0px;
 }
 
 .carousel-container::before,
 .carousel-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 150px;
-    height: 100%;
-    pointer-events: none;
-    z-index: 2;
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
 }
 
 .carousel-container::before {
-    left: 0;
-    background: linear-gradient(to right, rgba(15, 17, 24, 1) 0%, rgba(15, 17, 24, 0.7) 40%, rgba(15, 17, 24, 0) 100%);
+  left: 0;
+  background: linear-gradient(to right, rgba(15, 17, 24, 1) 0%, rgba(15, 17, 24, 0.7) 40%, rgba(15, 17, 24, 0) 100%);
 }
 
 .carousel-container::after {
-    right: 0;
-    background: linear-gradient(to left, rgba(15, 17, 24, 1) 0%, rgba(15, 17, 24, 0.7) 40%, rgba(15, 17, 24, 0) 100%);
+  right: 0;
+  background: linear-gradient(to left, rgba(15, 17, 24, 1) 0%, rgba(15, 17, 24, 0.7) 40%, rgba(15, 17, 24, 0) 100%);
 }
 
 .carousel-track {
-    display: flex;
-    gap: 20px;
-    width: max-content;
-    animation: scroll 50s linear infinite;
-    will-change: transform;
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll 50s linear infinite;
+  will-change: transform;
 }
 
 .carousel-item {
-    width: 300px;
-    flex: 0 0 auto;
-    margin: 0px 10px;
+  width: 300px;
+  flex: 0 0 auto;
+  margin: 0px 10px;
 }
 
 @keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
+  from {
+    transform: translateX(0);
+  }
 
-    to {
-        transform: translateX(-50%);
-    }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.carousel-container-habilities {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.carousel-track-habilities {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll-habilities 50s linear infinite;
+  will-change: transform;
+}
+
+.carousel-item-habilities {
+  width: 8rem;
+  flex: 0 0 auto;
+}
+
+@keyframes scroll-habilities {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
