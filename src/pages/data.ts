@@ -99,7 +99,7 @@ export const habilitiesCarousel = [
 	},
 	{
 		icon: TailwindLogo,
-		text: 'TAILWIND'
+		text: 'TAILWINDCSS'
 	},
 	{
 		icon: SupabaseLogo,
