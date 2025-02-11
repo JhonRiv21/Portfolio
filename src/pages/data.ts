@@ -55,7 +55,7 @@ export const skills = [
 
 export const experience = [
 	{
-		image: LinkTicLogo.src,
+		image: LinkTicLogo,
 		name: 'LINKTIC S.A.S. - BOGOTÁ D.C.',
 		jobposition: 'DESARROLLADOR / LÍDER FRONT-END',
 		date: 'MARZO. 2024 - FEB. 2025, BOGOTÁ D.C.',
@@ -63,22 +63,13 @@ export const experience = [
 		description2: 'ADEMÁS DE MIS RESPONSABILIDADES EN DESARROLLO, SEGUIMIENTO Y SOPORTE, MANTENGO UNA VISIÓN GLOBAL DEL APLICATIVO PARA OFRECER SOLUCIONES EFECTIVAS EN DISTINTOS MÓDULOS Y OPTIMIZAR LA COLABORACIÓN DENTRO DEL EQUIPO.'
 	},
 	{
-		image: WimbuLogo.src,
+		image: WimbuLogo,
 		name: 'WIMBU S.A.S. - BOGOTÁ D.C.',
 		jobposition: 'DESARROLLADOR FRONT-END',
 		date: 'ABRIL 2023 - FEB. 2024, BOGOTÁ D.C.',
 		description1: 'INICIÉ APOYANDO DIVERSOS EQUIPOS EN DISTINTOS PROYECTOS, ADAPTÁNDOME RÁPIDAMENTE A DIFERENTES METODOLOGÍAS, PROCESOS Y TECNOLOGÍAS EN SISTEMAS ECOMMERCE, CORE, SGDEA, CRM Y DISTINTOS MVPS.',
 		description2: 'CON EL TIEMPO, ASUMÍ EL LIDERAZGO DE PEQUEÑOS EQUIPOS EN PROYECTOS DE CORTO PLAZO. GRACIAS A LOS RESULTADOS OBTENIDOS, OBTUVE EL LIDERAZGO EN PROYECTOS MÁS COMPLEJOS CON UNA MAYOR CANTIDAD DE DESARROLLADORES.'
 	}
-]
-
-export const recomendaciones = [
-    {
-        image: '',
-        jobposition: 'DESARROLLADOR FULLSTACK',
-        date: '29 DE SEPTIEMBRE DE 2022, PABLO TRABAJABA CON JHON',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
-    }
 ]
 
 export const habilitiesCarousel = [

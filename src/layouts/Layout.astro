@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import "../styles/dots.css";
+import "../styles/transitions.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ClientRouter from "astro/components/ClientRouter.astro";
@@ -37,3 +38,17 @@ import ClientRouter from "astro/components/ClientRouter.astro";
 		scroll-behavior: smooth;
 	}
 </style>
+
+<script is:inline>
+	const sections = document.querySelectorAll('.fade-in, .slide-left, .slide-right');
+  
+	const observer = new IntersectionObserver(entries => {
+	  entries.forEach(entry => {
+		if (entry.isIntersecting) {
+		  entry.target.classList.add('show');
+		}
+	  });
+	}, { threshold: 0.2 });
+  
+	sections.forEach(section => observer.observe(section));
+</script>
