@@ -1,6 +1,7 @@
 ---
+import "../styles/carousel.css";
 import Layout from "../layouts/Layout.astro";
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import { experience, skills, habilitiesCarousel } from "./data";
 import Recommendations from "../../public/recommendations.json";
 ---
@@ -17,7 +18,9 @@ import Recommendations from "../../public/recommendations.json";
 			id="about-me"
 			class="flex flex-col lg:flex-row justify-between w-full gap-y-8 gap-x-5"
 		>
-			<div class="fade-in sm:slide-right w-full flex flex-col justify-center items-start">
+			<div
+				class="fade-in sm:slide-right w-full flex flex-col justify-center items-start"
+			>
 				<div
 					class="flex flex-col items-end space-x-4 md:space-x-5 lg:space-x-7"
 				>
@@ -151,8 +154,9 @@ import Recommendations from "../../public/recommendations.json";
 				<div class="carousel-container">
 					<div class="carousel-track">
 						{
-							[...Recommendations, ...Recommendations].filter((item) => item.author !== 'Desconocido').map(
-								(item) => (
+							[...Recommendations, ...Recommendations]
+								.filter((item) => item.author !== "Desconocido")
+								.map((item) => (
 									<div class="carousel-item">
 										<div class="relative">
 											<div class="absolute top-[-10px] right-[-10px] w-full min-h-[400px] bg-[#F5F5F5] rounded-2xl" />
@@ -182,8 +186,7 @@ import Recommendations from "../../public/recommendations.json";
 											</div>
 										</div>
 									</div>
-								),
-							)
+								))
 						}
 					</div>
 				</div>
@@ -279,57 +282,3 @@ import Recommendations from "../../public/recommendations.json";
 		</section>
 	</section>
 </Layout>
-
-<style lang="postcss">
-	.carousel-container {
-	  overflow: hidden;
-	  position: relative;
-	  width: 100%;
-	  opacity: 80%;
-	  padding: 10px 0px;
-	}
-  
-	.carousel-container::before,
-	.carousel-container::after {
-	  content: "";
-	  position: absolute;
-	  top: 0;
-	  width: 150px;
-	  height: 100%;
-	  pointer-events: none;
-	  z-index: 2;
-	}
-  
-	.carousel-container::before {
-	  left: 0;
-	  background: linear-gradient(to right, rgba(15, 17, 24, 1) 0%, rgba(15, 17, 24, 0.7) 40%, rgba(15, 17, 24, 0) 100%);
-	}
-  
-	.carousel-container::after {
-	  right: 0;
-	  background: linear-gradient(to left, rgba(15, 17, 24, 1) 0%, rgba(15, 17, 24, 0.7) 40%, rgba(15, 17, 24, 0) 100%);
-	}
-  
-	.carousel-track {
-	  display: flex;
-	  gap: 20px;
-	  width: max-content;
-	  animation: scroll 50s linear infinite;
-	  will-change: transform;
-	}
-  
-	.carousel-item {
-	  width: 300px;
-	  flex: 0 0 auto;
-	  margin: 0px 10px;
-	}
-  
-	@keyframes scroll {
-	  from {
-		transform: translateX(0);
-	  }
-	  to {
-		transform: translateX(-50%);
-	  }
-	}	
-</style>

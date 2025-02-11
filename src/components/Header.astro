@@ -1,31 +1,76 @@
-<header id="in" class="slide-left pt-5 px-5 sm:p-5 text-white w-full relative z-50">
+<header
+  id="in"
+  class="slide-left pt-5 px-5 sm:p-5 text-white w-full relative z-50"
+>
   <details id="mobile-menu" class="sm:hidden relative group">
-    <summary class="w-10 h-10 flex items-center justify-center cursor-pointer list-none">
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
-        class="transition-transform duration-300 group-open:hidden">
-        <path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/>
+    <summary
+      class="w-10 h-10 flex items-center justify-center cursor-pointer list-none"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        class="transition-transform duration-300 group-open:hidden"
+      >
+        <path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"
+        ></path>
       </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
-        class="absolute opacity-0 group-open:opacity-100 transition-opacity duration-300">
-        <path fill="currentColor" d="M18.3 5.7 12 12l-6.3-6.3-1.4 1.4L10.6 12l-6.3 6.3 1.4 1.4L12 13.4l6.3 6.3 1.4-1.4L13.4 12l6.3-6.3z"/>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        class="absolute opacity-0 group-open:opacity-100 transition-opacity duration-300"
+      >
+        <path
+          fill="currentColor"
+          d="M18.3 5.7 12 12l-6.3-6.3-1.4 1.4L10.6 12l-6.3 6.3 1.4 1.4L12 13.4l6.3 6.3 1.4-1.4L13.4 12l6.3-6.3z"
+        ></path>
       </svg>
     </summary>
 
-    <nav class="absolute left-0 top-full w-full bg-[#010101] shadow-md transform scale-95 opacity-0 transition-all duration-300 group-open:opacity-100 group-open:scale-100">
+    <nav
+      class="absolute left-0 top-full w-full bg-[#010101] shadow-md transform scale-95 opacity-0 transition-all duration-300 group-open:opacity-100 group-open:scale-100"
+    >
       <ul class="flex flex-col items-center gap-4 p-5">
-        <li class="w-full"><a href="#habilities" class="block py-3 px-2 hover:bg-gray-800 w-full menu-link">HABILIDADES</a></li>
-        <li class="w-full"><a href="#experience" class="block py-3 px-2 hover:bg-gray-800 w-full menu-link">EXPERIENCIA</a></li>
-        <li class="w-full"><a href="#recomendations" class="block py-3 px-2 hover:bg-gray-800 w-full menu-link">RECOMENDACIONES</a></li>
-        <li class="w-full"><a href="#contact" class="block py-3 px-2 hover:bg-gray-800 w-full menu-link">CONTACTO</a></li>
+        <li class="w-full">
+          <a
+            href="#habilities"
+            class="block py-3 px-2 hover:bg-gray-800 w-full menu-link"
+            >HABILIDADES</a>
+        </li>
+        <li class="w-full">
+          <a
+            href="#experience"
+            class="block py-3 px-2 hover:bg-gray-800 w-full menu-link"
+            >EXPERIENCIA</a>
+        </li>
+        <li class="w-full">
+          <a
+            href="#recomendations"
+            class="block py-3 px-2 hover:bg-gray-800 w-full menu-link"
+            >RECOMENDACIONES</a>
+        </li>
+        <li class="w-full">
+          <a
+            href="#contact"
+            class="block py-3 px-2 hover:bg-gray-800 w-full menu-link"
+            >CONTACTO</a>
+        </li>
       </ul>
     </nav>
   </details>
 
   <nav class="hidden sm:flex justify-end w-full">
-    <ul class="flex flex-row justify-end w-full gap-8 mx-auto max-w-screen-2xl text-sm">
+    <ul
+      class="flex flex-row justify-end w-full gap-8 mx-auto max-w-screen-2xl text-sm"
+    >
       <li class="hover:underline"><a href="#habilities">HABILIDADES</a></li>
       <li class="hover:underline"><a href="#experience">EXPERIENCIA</a></li>
-      <li class="hover:underline"><a href="#recomendations">RECOMENDACIONES</a></li>
+      <li class="hover:underline">
+        <a href="#recomendations">RECOMENDACIONES</a>
+      </li>
       <li class="hover:underline"><a href="#contact">CONTACTO</a></li>
     </ul>
   </nav>
@@ -34,7 +79,7 @@
 <script is:inline>
   document.addEventListener("click", (event) => {
     const menu = document.getElementById("mobile-menu");
-    
+
     if (menu.hasAttribute("open") && !menu.contains(event.target)) {
       menu.removeAttribute("open");
     }
