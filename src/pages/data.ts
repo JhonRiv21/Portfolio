@@ -22,56 +22,56 @@ import NodeJsLogo from '../assets/icons-svg/nodejs.astro'
 export const skills = [
 	{
 		icon: LanguagesIcon,
-		text: 'LENGUAJES DE PROGRAMACIÓN: JAVASCRIPT, TYPESCRIPT.'
+		text: 'Lenguajes de programación: JavaScript, TypeScript.'
 	},
 	{
 		icon: PostgreIcon,
-		text: 'BASES DE DATOS Y BACKEND: SUPABASE, FIREBASE, POSTGRESQL, NODE.JS.'
+		text: 'Bases de datos y backend: Supabase, Firebase, PostgreSQL, Node.js.'
 	},
 	{
 		icon: ReactIcon,
-		text: 'FRAMEWORKS: SVELTE, SVELTEKIT, VUE/QUASAR, NUXT, REACT, ASTRO, VITE. SSR Y CSR.'
+		text: 'Frameworks: Svelte, SvelteKit, Vue/Quasar, Nuxt, React, Astro, Vite. SSR y CSR.'
 	},
 	{
 		icon: AutomationIcon,
-		text: 'AUTOMATIZACIÓN: PUPPETEER, K6, NODE.JS.'
+		text: 'Automatización: Puppeteer, K6, Node.js.'
 	},
 	{
 		icon: CssIcon,
-		text: 'DISEÑO Y ESTILOS: TAILWIND CSS, BOOTSTRAP, SCSS, CSS3, SAAS, STYLED COMPONENTS, JQUERY, MUI, SHADCN, FLOWBITE, QUASAR COMPONENTS, FIGMA.'
+		text: 'Diseño y estilos: Tailwind CSS, Bootstrap, SCSS, CSS3, SaaS, Styled Components, jQuery, MUI, ShadCN, Flowbite, Quasar Components, Figma.'
 	},
 	{
 		icon: PostmanIcon,
-		text: 'TESTING: POSTMAN, SWAGGER, VITEST.'
+		text: 'Testing: Postman, Swagger, Vitest.'
 	},
 	{
 		icon: GitIcon,
-		text: 'CONTROL DE VERSIONES: GIT, GITHUB, AZURE. REVISIÓN DE CÓDIGO Y PULL REQUESTS, PROMOCIÓN DE BUENAS PRÁCTICAS DE DESARROLLO.'
+		text: 'Control de versiones: Git, GitHub, Azure. Revisión de código y pull requests, promoción de buenas prácticas de desarrollo.'
 	},
 	{
 		icon: BriefCaseIcon,
-		text: 'LIDERAZGO EN EQUIPOS FRONTEND, MENTORÍA TÉCNICA, DEFINICIÓN DE ARQUITECTURAS FRONTEND ESCALABLES, PLANIFICACIÓN DE ENTREGAS.'
+		text: 'Liderazgo en equipos frontend, mentoría técnica, definición de arquitecturas frontend escalables, planificación de entregas.'
 	},
-]
+];
 
 export const experience = [
 	{
 		image: LinkTicLogo,
-		name: 'LINKTIC S.A.S. - BOGOTÁ D.C.',
-		jobposition: 'DESARROLLADOR / LÍDER FRONT-END',
-		date: 'MARZO. 2024 - FEB. 2025, BOGOTÁ D.C.',
-		description1: 'LIDERÉ EL DESARROLLO FRONTEND EN DOS PROYECTOS DE GRAN ESCALA, DEFINIENDO TECNOLOGÍAS, ESTABLECIENDO ESTÁNDARES DE DESARROLLO Y GESTIONANDO EQUIPOS SEGÚN LAS NECESIDADES TÉCNICAS.',
-		description2: 'ADEMÁS DE MIS RESPONSABILIDADES EN DESARROLLO, SEGUIMIENTO Y SOPORTE, MANTENGO UNA VISIÓN GLOBAL DEL APLICATIVO PARA OFRECER SOLUCIONES EFECTIVAS EN DISTINTOS MÓDULOS Y OPTIMIZAR LA COLABORACIÓN DENTRO DEL EQUIPO.'
+		name: 'Linktic S.A.S. - Bogotá D.C.',
+		jobposition: 'Desarrollador / Líder Front-End',
+		date: 'Marzo 2024 - Febrero 2025, Bogotá D.C.',
+		description1: 'Lideré el desarrollo frontend en dos proyectos de gran escala, definiendo tecnologías, estableciendo estándares de desarrollo y gestionando equipos según las necesidades técnicas.',
+		description2: 'Además de mis responsabilidades en desarrollo, seguimiento y soporte, mantengo una visión global del aplicativo para ofrecer soluciones efectivas en distintos módulos y optimizar la colaboración dentro del equipo.'
 	},
 	{
 		image: WimbuLogo,
-		name: 'WIMBU S.A.S. - BOGOTÁ D.C.',
-		jobposition: 'DESARROLLADOR FRONT-END',
-		date: 'ABRIL 2023 - FEB. 2024, BOGOTÁ D.C.',
-		description1: 'INICIÉ APOYANDO DIVERSOS EQUIPOS EN DISTINTOS PROYECTOS, ADAPTÁNDOME RÁPIDAMENTE A DIFERENTES METODOLOGÍAS, PROCESOS Y TECNOLOGÍAS EN SISTEMAS ECOMMERCE, CORE, SGDEA, CRM Y DISTINTOS MVPS.',
-		description2: 'CON EL TIEMPO, ASUMÍ EL LIDERAZGO DE PEQUEÑOS EQUIPOS EN PROYECTOS DE CORTO PLAZO. GRACIAS A LOS RESULTADOS OBTENIDOS, OBTUVE EL LIDERAZGO EN PROYECTOS MÁS COMPLEJOS CON UNA MAYOR CANTIDAD DE DESARROLLADORES.'
+		name: 'Wimbu S.A.S. - Bogotá D.C.',
+		jobposition: 'Desarrollador Front-End',
+		date: 'Abril 2023 - Febrero 2024, Bogotá D.C.',
+		description1: 'Inicié apoyando diversos equipos en distintos proyectos, adaptándome rápidamente a diferentes metodologías, procesos y tecnologías en sistemas ecommerce, Core, SGDEA, CRM y distintos MVPs.',
+		description2: 'Con el tiempo, asumí el liderazgo de pequeños equipos en proyectos de corto plazo. Gracias a los resultados obtenidos, obtuve el liderazgo en proyectos más complejos con una mayor cantidad de desarrolladores.'
 	}
-]
+];
 
 export const habilitiesCarousel = [
 	{

@@ -2,8 +2,7 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  opacity: 80%;
-  padding: 10px 0px;
+  padding: 10px 0;
 }
 
 .carousel-container::before,
@@ -11,7 +10,7 @@
   content: "";
   position: absolute;
   top: 0;
-  width: 150px;
+  width: 100px;
   height: 100%;
   pointer-events: none;
   z-index: 2;
@@ -19,24 +18,23 @@
 
 .carousel-container::before {
   left: 0;
-  background: linear-gradient(to right, rgba(15, 17, 24, 1) 0%, rgba(15, 17, 24, 0.7) 40%, rgba(15, 17, 24, 0) 100%);
+  background: linear-gradient(to right, rgba(15, 17, 24, 1) 0%, rgba(15, 17, 24, 0.7) 10%, rgba(15, 17, 24, 0) 100%);
 }
 
 .carousel-container::after {
   right: 0;
-  background: linear-gradient(to left, rgba(15, 17, 24, 1) 0%, rgba(15, 17, 24, 0.7) 40%, rgba(15, 17, 24, 0) 100%);
+  background: linear-gradient(to left, rgba(15, 17, 24, 1) 0%, rgba(15, 17, 24, 0.7) 10%, rgba(15, 17, 24, 0) 100%);
 }
 
 .carousel-track {
   display: flex;
-  gap: 20px;
   width: max-content;
   animation: scroll 50s linear infinite;
   will-change: transform;
 }
 
 .carousel-item {
-  width: 300px;
+  width: 120px;
   flex: 0 0 auto;
   margin: 0px 10px;
 }
@@ -51,27 +49,57 @@
   }
 }
 
-.carousel-container-habilities {
+
+
+
+
+
+
+
+.carousel-container-responsabilities {
   overflow: hidden;
   position: relative;
   width: 100%;
   padding: 10px 0;
 }
 
-.carousel-track-habilities {
+.carousel-track-responsabilities {
   display: flex;
   gap: 20px;
   width: max-content;
-  animation: scroll-habilities 50s linear infinite;
+  animation: scroll-responsabilities 50s linear infinite;
   will-change: transform;
 }
 
-.carousel-item-habilities {
-  width: 8rem;
+.carousel-item-responsabilities {
+  width: 300px;
   flex: 0 0 auto;
+  margin: 0px 20px;
 }
 
-@keyframes scroll-habilities {
+.carousel-container-responsabilities::before,
+.carousel-container-responsabilities::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.carousel-container-responsabilities::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(15, 17, 24, 1) 0%, rgba(15, 17, 24, 0.7) 10%, rgba(15, 17, 24, 0) 100%);
+}
+
+.carousel-container-responsabilities::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(15, 17, 24, 1) 0%, rgba(15, 17, 24, 0.7) 10%, rgba(15, 17, 24, 0) 100%);
+}
+
+
+@keyframes scroll-responsabilities {
   from {
     transform: translateX(0);
   }
