@@ -56,29 +56,29 @@
 
 
 
-.carousel-container-responsabilities {
+.carousel-container-recomendations {
   overflow: hidden;
   position: relative;
   width: 100%;
   padding: 10px 0;
 }
 
-.carousel-track-responsabilities {
+.carousel-track-recomendations {
   display: flex;
   gap: 20px;
   width: max-content;
-  animation: scroll-responsabilities 50s linear infinite;
+  animation: scroll-recomendations 50s linear infinite;
   will-change: transform;
 }
 
-.carousel-item-responsabilities {
+.carousel-item-recomendations {
   width: 300px;
   flex: 0 0 auto;
   margin: 0px 20px;
 }
 
-.carousel-container-responsabilities::before,
-.carousel-container-responsabilities::after {
+.carousel-container-recomendations::before,
+.carousel-container-recomendations::after {
   content: "";
   position: absolute;
   top: 0;
@@ -88,18 +88,18 @@
   z-index: 2;
 }
 
-.carousel-container-responsabilities::before {
+.carousel-container-recomendations::before {
   left: 0;
   background: linear-gradient(to right, rgba(15, 17, 24, 1) 0%, rgba(15, 17, 24, 0.7) 10%, rgba(15, 17, 24, 0) 100%);
 }
 
-.carousel-container-responsabilities::after {
+.carousel-container-recomendations::after {
   right: 0;
   background: linear-gradient(to left, rgba(15, 17, 24, 1) 0%, rgba(15, 17, 24, 0.7) 10%, rgba(15, 17, 24, 0) 100%);
 }
 
 
-@keyframes scroll-responsabilities {
+@keyframes scroll-recomendations {
   from {
     transform: translateX(0);
   }
@@ -107,4 +107,21 @@
   to {
     transform: translateX(-50%);
   }
+}
+
+.control-btn {
+  background: #1f2430;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.control-btn:hover {
+  background: white;
+  color: #1f2430;
 }

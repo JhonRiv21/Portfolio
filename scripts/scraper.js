@@ -50,7 +50,7 @@ const COOKIES_PATH = 'cookies.json';
     }
 
     console.log('Seleccionando pestaña de recomendaciones recibidas...')
-    await page.waitForSelector('button[role="tab"]', { timeout: 6000 })
+    await page.waitForSelector('button[role="tab"]', { timeout: 10000 })
 
     await page.evaluate(() => {
       const receivedTab = Array.from(document.querySelectorAll('button[role="tab"]'))

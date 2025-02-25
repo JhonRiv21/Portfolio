@@ -84,4 +84,19 @@ import ClientRouter from "astro/components/ClientRouter.astro";
 			handleScroll();
 		});
 	}
+
+	document.addEventListener("DOMContentLoaded", () => {
+		const track = document.querySelector(".carousel-track-recomendations");
+		const pauseBtn = document.getElementById("pauseBtn");
+
+		if (!track || !pauseBtn) return;
+
+		let isPaused = false;
+
+		pauseBtn.addEventListener("click", () => {
+			isPaused = !isPaused;
+			track.style.animationPlayState = isPaused ? "paused" : "running";
+			pauseBtn.textContent = isPaused ? "▶ Continuar" : "⏸ Pausar";
+		});
+	});
 </script>
