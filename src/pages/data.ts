@@ -50,7 +50,7 @@ export const skills = [
 	},
 	{
 		icon: BriefCaseIcon,
-		text: 'Liderazgo en equipos frontend, mentoría técnica, definición de arquitecturas frontend escalables, planificación de entregas.'
+		text: 'Liderazgo en equipos frontend, mentoría técnica, planificación de entregas y definición de tecnologías y metodologías para optimizar el desarrollo de proyectos.'
 	},
 ];
 
@@ -60,8 +60,8 @@ export const experience = [
 		name: 'Linktic S.A.S. - Bogotá D.C.',
 		jobposition: 'Desarrollador / Líder Front-End',
 		date: 'Marzo 2024 - Febrero 2025, Bogotá D.C.',
-		description1: 'Lideré el desarrollo frontend en dos proyectos de gran escala, definiendo tecnologías, estableciendo estándares de desarrollo y gestionando equipos según las necesidades técnicas.',
-		description2: 'Además de mis responsabilidades en desarrollo, seguimiento y soporte, mantengo una visión global del aplicativo para ofrecer soluciones efectivas en distintos módulos y optimizar la colaboración dentro del equipo.'
+		description1: 'Me desempeñé como líder frontend en dos importantes proyectos, en el último pude definir las tecnologías desde el inicio, metodologías para el área, realizar las entrevistas técnicas y gestionar según las necesidades técnicas. Dirigiendo un equipo de 14 desarrolladores frontend para el desarrollo del Core.',
+		description2: 'Además de las tareas diarias de desarrollo y soporte que realizaba a diario, siempre intenté estar contextualizado sobre las funcionalidades y nuevos requerimientos de los diferentes módulos del aplicativo para poder realizar un apoyo transversal óptimo a mi equipo'
 	},
 	{
 		image: WimbuLogo,

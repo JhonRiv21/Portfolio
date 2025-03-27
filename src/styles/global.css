@@ -6,3 +6,9 @@
   font-weight: 500;
   font-style: normal;
 }
+
+@media screen and (max-width: 330px) {
+  .h1-extra-responsive {
+    font-size: 30px;
+  }
+}
