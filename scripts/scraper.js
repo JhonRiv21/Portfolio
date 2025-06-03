@@ -1,12 +1,25 @@
 import puppeteer from 'puppeteer'
 import fs from 'fs'
 import path from 'path'
+import { downloadImage } from './downloadImages.js'
 
 const LINKEDIN_LOGIN = 'https://www.linkedin.com/login'
 const LINKEDIN_RECOMMENDATIONS = 'https://www.linkedin.com/in/jhonrivero/details/recommendations/'
-const COOKIES_PATH = 'cookies.json';
+const COOKIES_PATH = 'cookies.json'
+const IMAGES_DIR = path.join('public', 'photos')
 
-(async () => {
+if (fs.existsSync(IMAGES_DIR)) {
+  fs.readdirSync(IMAGES_DIR).forEach(file => {
+    const filePath = path.join(IMAGES_DIR, file)
+    if (fs.lstatSync(filePath).isFile()) {
+      fs.unlinkSync(filePath)
+    }
+  })
+} else {
+  fs.mkdirSync(IMAGES_DIR, { recursive: true })
+}
+
+;(async () => {
   try {
     console.log('Iniciando Puppeteer...')
     const browser = await puppeteer.launch({
@@ -64,7 +77,7 @@ const COOKIES_PATH = 'cookies.json';
 
     const recommendations = await page.evaluate(() => {
       return Array.from(document.querySelectorAll('.pvs-list__paged-list-item')).map(rec => {
-        const photo = rec.querySelector('.ivm-view-attr__img--centered')?.getAttribute('src') || 'Sin imagen'
+        const photo = rec.querySelector('.ivm-view-attr__img--centered')?.getAttribute('src') || ''
         const author = rec.querySelector('.t-bold')?.innerText.split('\n')[0].trim() || 'Desconocido'
 
         const positionElement = rec.querySelector('.t-14.t-normal span[aria-hidden="true"]')
@@ -82,7 +95,25 @@ const COOKIES_PATH = 'cookies.json';
       })
     })
 
-    console.log(`Recomendaciones recibidas obtenidas: ${recommendations.length}`)
+    if (!fs.existsSync(IMAGES_DIR)) fs.mkdirSync(IMAGES_DIR, { recursive: true })
+
+    for (const rec of recommendations) {
+      if (rec.photo && rec.photo.startsWith('http')) {
+        const fileName = rec.author.replace(/[^a-z0-9]/gi, '_').toLowerCase() + '.jpg'
+        const filePath = path.join(IMAGES_DIR, fileName)
+
+        try {
+          await downloadImage(rec.photo, filePath)
+          console.log(`Imagen descargada para ${rec.author}`)
+          rec.photo = `/photos/${fileName}`
+        } catch (err) {
+          console.error(`No se pudo descargar imagen para ${rec.author}: ${err.message}`)
+        }
+      } else {
+        rec.photo = '/photos/default.jpg'
+      }
+    }
+
     fs.writeFileSync(path.join('public', 'recommendations.json'), JSON.stringify(recommendations, null, 2))
 
     console.log('Datos guardados en public/recommendations.json')
