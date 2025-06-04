@@ -1,0 +1,38 @@
+---
+const { photo, author, position, date, text } = Astro.props;
+---
+
+<div class="carousel-item-recomendations opacity-90">
+  <div class="relative">
+    <div
+      class="absolute top-[-10px] right-[-10px] w-full min-h-[400px] bg-[#F5F5F5] rounded-2xl"
+    >
+    </div>
+    <div
+      class="w-full p-5 bg-[#1F2430] rounded-2xl relative border-2 border-white min-h-[400px] flex flex-col justify-start"
+    >
+      <div class="flex flex-col p-5 items-center justify-center">
+        <img
+          src={photo}
+          alt={author}
+          width="96"
+          height="96"
+          class="rounded-full"
+          loading="lazy"
+        />
+        <p class="text-sm pt-5 line-clamp-[1] text-center overflow-hidden">
+          {author}
+        </p>
+        <p class="text-xs text-center pt-1 line-clamp-[2] overflow-hidden">
+          {position}
+        </p>
+        <p class="text-xs opacity-60 pt-1">
+          {date}
+        </p>
+      </div>
+      <p class="text-xs line-clamp-[7] overflow-hidden">
+        {text}
+      </p>
+    </div>
+  </div>
+</div>

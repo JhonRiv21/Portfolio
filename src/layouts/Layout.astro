@@ -20,8 +20,8 @@ import ClientRouter from "astro/components/ClientRouter.astro";
 	<body class="bg-[#0D121E] text-[#F5F5F5] space-y-20 sm:space-y-40">
 		<Header />
 		<div class="doc-stars doc-stars--sm"></div>
-		<div class="doc-stars doc-stars--sm"></div>
-		<div class="doc-stars doc-stars--sm"></div>
+		<div class="doc-stars doc-stars--md"></div>
+		<div class="doc-stars doc-stars--lg"></div>
 		<main class="max-w-screen-2xl mx-auto p-5 md:p-10">
 			<slot />
 		</main>
@@ -41,8 +41,8 @@ import ClientRouter from "astro/components/ClientRouter.astro";
 </style>
 
 <script is:inline>
-	const sections = document.querySelectorAll(
-		".fade-in, .slide-left, .slide-right",
+	const animatedSections = document.querySelectorAll(
+		".fade-in, .slide-left, .slide-right"
 	);
 
 	const observer = new IntersectionObserver(
@@ -53,31 +53,41 @@ import ClientRouter from "astro/components/ClientRouter.astro";
 				}
 			});
 		},
-		{ threshold: 0.2 },
+		{ threshold: 0.2 }
 	);
 
-	sections.forEach((section) => observer.observe(section));
+	animatedSections.forEach((section) => observer.observe(section));
 
 	if (typeof window !== "undefined") {
 		requestIdleCallback(() => {
 			const sections = document.querySelectorAll("section[id]");
 
 			const handleScroll = () => {
-			let currentSection = sections[0];
+				let currentSection = null;
+				let minDistance = Infinity;
+				const viewportCenter = window.innerHeight / 2;
 
-			sections.forEach((section) => {
-				const rect = section.getBoundingClientRect();
-				if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-				currentSection = section;
-				}
-			});
+				sections.forEach((section) => {
+					const rect = section.getBoundingClientRect();
+					const sectionCenter = rect.top + rect.height / 2;
+					const distance = Math.abs(viewportCenter - sectionCenter);
 
-			if (currentSection) {
-				const newUrl = `#${currentSection.id}`;
-				if (history.state !== newUrl) {
-				history.replaceState(null, "", newUrl);
+					if (distance < minDistance) {
+						minDistance = distance;
+						currentSection = section;
+					}
+				});
+
+				if (currentSection) {
+					const newUrl = `#${currentSection.id}`;
+					if (location.hash !== newUrl) {
+						history.replaceState(null, "", newUrl);
+					}
+
+					document.querySelectorAll("nav a[data-section]").forEach((link) => {
+						link.classList.toggle("underline", link.dataset.section === currentSection.id);
+					});
 				}
-			}
 			};
 
 			document.addEventListener("scroll", handleScroll, { passive: true });

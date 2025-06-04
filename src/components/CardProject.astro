@@ -1,0 +1,57 @@
+---
+  import { Image } from "astro:assets";
+  const { image, name, role, description, stack, github, url } = Astro.props;
+---
+
+<div class="relative">
+  <div class="absolute top-[-10px] right-[-10px] w-full h-full bg-[#F5F5F5] rounded-2xl" />
+  <div class="w-full p-5 bg-[#1F2430] rounded-2xl relative border-2 border-white h-full min-h-[350px]">
+    <div class="flex flex-col h-full items-center justify-center space-y-6">
+      <div class="flex flex-col gap-5 items-start w-full">
+        <video autoplay loop muted playsinline class="w-full h-full rounded-md">
+          <source src={image} type="video/mp4" />
+        </video>
+        <div class="text-left">
+          <p class="text-md lg:text-2xl font-semibold">{name}</p>
+          <p class="text-sm opacity-80 pt-1 italic">{role}</p>
+          <p class="text-sm mt-2">{description}</p>
+          <p class="text-gray-300 mt-2">Tecnologías: {stack}</p>
+        </div>
+      </div>
+      <div class="flex gap-4 justify-center items-center ml-auto">
+        {github && 
+          <a href={github} target="_blank" class="hover:underline text-xs flex flex-row items-center">
+            REPOSITORIO
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+						>
+							<path
+								fill="#ffffff"
+								d="M6.189 17.289L5.5 16.6L15.58 6.5H6.289v-1h11v11h-1V7.208z"
+							></path>
+						</svg>
+          </a>
+        }
+        {url &&
+          <a href={url} target="_blank" class="hover:underline text-xs flex flex-row items-center">
+            PÁGINA
+            <svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+						>
+							<path
+								fill="#ffffff"
+								d="M6.189 17.289L5.5 16.6L15.58 6.5H6.289v-1h11v11h-1V7.208z"
+							></path>
+						</svg>
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+</div>
