@@ -28,7 +28,7 @@ import FrontendQuizVid from '../assets/projects/frontendquiz.mp4'
 export const skills = [
   {
     icon: LanguagesIcon,
-    text: 'Lenguajes de programación: JavaScript, TypeScript.'
+    text: 'Lenguajes de programación: JavaScript, TypeScript, Java.'
   },
   {
     icon: PostgreIcon,
@@ -36,7 +36,7 @@ export const skills = [
   },
   {
     icon: ReactIcon,
-    text: 'Frameworks: Svelte, SvelteKit, React, React Native + Expo, Vue, Nuxt, Astro, Vite. SSR y CSR, Express - Node.JS.'
+    text: 'Frameworks: Svelte, SvelteKit, React, React Native + Expo, Vue, Nuxt, Astro, Vite. SSR y CSR, Java - Spring Boot, Express - Node.JS.'
   },
   {
     icon: AutomationIcon,
