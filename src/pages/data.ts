@@ -28,35 +28,35 @@ import FrontendQuizVid from '../assets/projects/frontendquiz.mp4'
 export const skills = [
   {
     icon: LanguagesIcon,
-    text: 'Lenguajes de programación: JavaScript, TypeScript, Java.'
+    text: 'Lenguajes de programación: TypeScript, JavaScript, Java.'
   },
   {
     icon: PostgreIcon,
-    text: 'Bases de datos y backend: Supabase, Railway, Firebase, PostgreSQL, Node.JS.'
+    text: 'Backend / Bases de datos: Node.js (Express), Java (Spring Boot), PostgreSQL, Firebase, Supabase, Railway, Render.'
   },
   {
     icon: ReactIcon,
-    text: 'Frameworks: Svelte, SvelteKit, React, React Native + Expo, Vue, Nuxt, Astro, Vite. SSR y CSR, Java - Spring Boot, Express - Node.JS.'
-  },
-  {
-    icon: AutomationIcon,
-    text: 'Automatización: Puppeteer, K6, Node.js.'
-  },
-  {
-    icon: CssIcon,
-    text: 'Diseño y estilos: Tailwind CSS, Bootstrap, SCSS, CSS3, SaaS, Styled Components, jQuery, MUI, ShadCN, Flowbite, Quasar Components, Figma.'
-  },
-  {
-    icon: PostmanIcon,
-    text: 'Testing y monitoreo: Postman, Swagger, Vitest, Unlighthouse, SonarQube.'
+    text: 'Frontend: Svelte, SvelteKit, React, React Native + Expo, Astro, Vue, Next.js, Vite.'
   },
   {
     icon: GitIcon,
-    text: 'Control de versiones: Git, GitHub, Azure. Revisión de código y pull requests, promoción de buenas prácticas de desarrollo.'
+    text: 'DevOps / Despliegue: Git, GitHub, Azure Pipelines (CI/CD), Vercel, Railway.'
+  },
+  {
+    icon: CssIcon,
+    text: 'Diseño y estilos: TailwindCSS, SCSS, Bootstrap, MUI, Shadcn, Flowbite, Figma.'
+  },
+  {
+    icon: PostmanIcon,
+    text: 'Testing / Automatización: Vitest, Postman, Swagger, Puppeteer, K6, SonarQube, Unlighthouse.'
+  },
+  {
+    icon: AutomationIcon,
+    text: 'Metodologías y prácticas: Revisión de PRs, mentoría técnica, estándares de calidad, planificación de entregas.'
   },
   {
     icon: BriefCaseIcon,
-    text: 'Liderazgo en equipos frontend, mentoría técnica, planificación de entregas y definición de tecnologías y metodologías para optimizar el desarrollo de proyectos.'
+    text: 'Liderazgo técnico: Definición de tecnologías y metodologías, coordinación de equipos frontend, promoción de buenas prácticas de desarrollo.'
   }
 ]
 
@@ -67,7 +67,7 @@ export const experience = [
     jobposition: 'Desarrollador / Líder Front-End',
     date: 'Marzo 2024 - Febrero 2025, Bogotá D.C.',
     description1: 'Me desempeñé como líder frontend en dos importantes proyectos, en el último pude definir las tecnologías desde el inicio, metodologías para el área, realizar las entrevistas técnicas y gestionar según las necesidades técnicas. Dirigiendo un equipo de 14 desarrolladores frontend para el desarrollo del Core.',
-    description2: 'Además de las tareas diarias de desarrollo y soporte que realizaba a diario, siempre intenté estar contextualizado sobre las funcionalidades y nuevos requerimientos de los diferentes módulos del aplicativo para poder realizar un apoyo transversal óptimo a mi equipo'
+    description2: 'Además de las tareas diarias de desarrollo y soporte que realizaba a diario, siempre intenté estar contextualizado sobre las funcionalidades y nuevos requerimientos de los diferentes módulos del aplicativo para poder realizar un apoyo transversal óptimo a mi equipo.'
   },
   {
     image: WimbuLogo,
@@ -128,7 +128,7 @@ export const dataProjects = [
     name: 'BPMNSmart',
     description:
       'Plataforma fullstack para diseñar, versionar y gestionar diagramas BPMN de forma intuitiva y segura. Soporta autenticación con Google, autoguardado, historial de versiones y exportación en XML.',
-    stack: 'SvelteKit, bpmn.io, Railway, Express, TailwindCSS',
+    stack: 'SvelteKit, bpmn.io, Render, Express, TailwindCSS',
     role: 'Proyecto Fullstack',
     github: 'https://github.com/JhonRiv21/BPMNSmart',
     page: 'https://bpmn-smart.vercel.app/'
