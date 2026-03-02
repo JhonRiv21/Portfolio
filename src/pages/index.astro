@@ -1,13 +1,15 @@
 ---
 import "../styles/carousel.css";
 import Layout from "../layouts/Layout.astro";
-import { experience, skills, habilitiesCarousel } from "./data";
+import { experience, skills, habilitiesCarousel, getYearsOfExperience } from "./data";
 import Recommendations from "../../public/recommendations.json";
 import CardRecomendations from "../components/CardRecomendations.astro";
 import CardExperience from "../components/CardExperience.astro";
 import Contact from "../components/Contact.astro";
 import CardProject from "../components/CardProject.astro";
 import { dataProjects } from './data'
+
+const yearsExp = getYearsOfExperience();
 ---
 
 <Layout>
@@ -42,9 +44,9 @@ import { dataProjects } from './data'
 
 			<div class="fade-in sm:slide-left w-full space-y-5">
 				<p class="text-sm sm:text-base">
-					Frontend semisenior con más de 2 años de experiencia liderando equipos y desarrollando
+					Frontend semisenior con más de {yearsExp} años de experiencia liderando equipos y desarrollando
 					interfaces web escalables con Svelte, Astro, React y Vue. Con enfoque en arquitectura,
-					SSR/CSR, diseño accesible, testing automatizado, y conocimientos en backend con Node.js y Java.
+					SSR/CSR, diseño accesible, testing automatizado, y backend con Node.js.
 				</p>
 				<p class="text-sm sm:text-base">
 					Como líder, promuevo la adopción de buenas prácticas, la mentoría técnica y
@@ -100,7 +102,7 @@ import { dataProjects } from './data'
 			<div class="slide-left w-full space-y-5">
 				<p class="pb-2">EXPERIENCIA</p>
 
-				<div class="grid md:grid-cols-2 justify-center gap-10">
+				<div class="max-w-3xl mx-auto">
 					{
 						experience.map((item) => (
 							<CardExperience

@@ -28,11 +28,11 @@ import FrontendQuizVid from '../assets/projects/frontendquiz.mp4'
 export const skills = [
   {
     icon: LanguagesIcon,
-    text: 'Lenguajes de programación: TypeScript, JavaScript, Java.'
+    text: 'Lenguajes de programación: TypeScript, JavaScript.'
   },
   {
     icon: PostgreIcon,
-    text: 'Backend / Bases de datos: Node.js (Express), Java (Spring Boot), PostgreSQL, Firebase, Supabase, Railway, Render.'
+    text: 'Backend / Bases de datos: Node.js (Express), PostgreSQL, Firebase, Supabase, Railway, Render.'
   },
   {
     icon: ReactIcon,
@@ -60,11 +60,27 @@ export const skills = [
   }
 ]
 
+const CAREER_START = new Date(2023, 3)
+
+export function getYearsOfExperience(): number {
+  const now = new Date()
+  const diffMonths = (now.getFullYear() - CAREER_START.getFullYear()) * 12 + (now.getMonth() - CAREER_START.getMonth())
+  return Math.ceil((diffMonths - 3) / 12) || 1
+}
+
 export const experience = [
   {
     image: LinkTicLogo,
     name: 'Linktic S.A.S. - Bogotá D.C.',
-    jobposition: 'Desarrollador / Líder Front-End',
+    jobposition: 'Desarrollador Front-End Semisenior',
+    date: 'Julio 2025 - Actualidad, Bogotá D.C.',
+    description1: 'Actualmente hago desarrollo y soporte de aplicativos internos y para el CNE, asegurando la calidad y escalabilidad de las soluciones fullstack.',
+    description2: 'Lidero un equipo de desarrollo para el departamento de marketing, definiendo estándares técnicos y coordinando entregas.'
+  },
+  {
+    image: LinkTicLogo,
+    name: 'Linktic S.A.S. - Bogotá D.C.',
+    jobposition: 'Desarrollador Front-End',
     date: 'Marzo 2024 - Febrero 2025, Bogotá D.C.',
     description1: 'Me desempeñé como líder frontend en dos importantes proyectos, en el último pude definir las tecnologías desde el inicio, metodologías para el área, realizar las entrevistas técnicas y gestionar según las necesidades técnicas. Dirigiendo un equipo de 14 desarrolladores frontend para el desarrollo del Core.',
     description2: 'Además de las tareas diarias de desarrollo y soporte que realizaba a diario, siempre intenté estar contextualizado sobre las funcionalidades y nuevos requerimientos de los diferentes módulos del aplicativo para poder realizar un apoyo transversal óptimo a mi equipo.'
