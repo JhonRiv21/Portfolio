@@ -20,6 +20,7 @@ import SupabaseLogo from '../assets/icons-svg/supabase.astro'
 import NodeJsLogo from '../assets/icons-svg/nodejs.astro'
 import ExpoLogo from '../assets/icons-svg/expo.astro'
 
+import RadarVid from '../assets/projects/radar.mp4'
 import BpmnSmartVid from '../assets/projects/bpmnsmart.mp4'
 import DictionaryVid from '../assets/projects/dictionaryapp.mp4'
 import PlanetsVid from '../assets/projects/planets.mp4'
@@ -139,6 +140,16 @@ export const habilitiesCarousel = [
 ]
 
 export const dataProjects = [
+  {
+    image: RadarVid,
+    name: 'Radar',
+    description:
+      'Tablero público de amenazas naturales en curso —sismos, incendios, inundaciones, tormentas y sequías— sobre un globo interactivo. Normaliza tres fuentes oficiales (USGS, NASA EONET y GDACS) con ingesta automática, filtros por tipo, país y rango, y bilingüe EN/ES.',
+    stack: 'Next.js 16, TypeScript, Drizzle + Postgres, MapLibre',
+    role: 'Proyecto Fullstack',
+    github: 'https://github.com/JhonRiv21/Radar',
+    page: 'https://radar.riverogz.com/'
+  },
   {
     image: BpmnSmartVid,
     name: 'BPMNSmart',
