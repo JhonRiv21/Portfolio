@@ -66,7 +66,7 @@ const CAREER_START = new Date(2023, 3)
 export function getYearsOfExperience(): number {
   const now = new Date()
   const diffMonths = (now.getFullYear() - CAREER_START.getFullYear()) * 12 + (now.getMonth() - CAREER_START.getMonth())
-  return Math.ceil((diffMonths - 3) / 12) || 1
+  return Math.max(1, Math.floor(diffMonths / 12))
 }
 
 export const experience = [
