@@ -20,6 +20,7 @@ import SupabaseLogo from '../assets/icons-svg/supabase.astro'
 import NodeJsLogo from '../assets/icons-svg/nodejs.astro'
 import ExpoLogo from '../assets/icons-svg/expo.astro'
 
+import MuseumVid from '../assets/projects/museum.mp4'
 import RadarVid from '../assets/projects/radar.mp4'
 import BpmnSmartVid from '../assets/projects/bpmnsmart.mp4'
 import DictionaryVid from '../assets/projects/dictionaryapp.mp4'
@@ -140,6 +141,16 @@ export const habilitiesCarousel = [
 ]
 
 export const dataProjects = [
+  {
+    image: MuseumVid,
+    name: 'Museum',
+    description:
+      'Museo virtual en 3D en el navegador: un recorrido guiado por tres salas —paleontología, vuelo y espacio, civilizaciones antiguas— con escaneos reales de museos como el Smithsonian y el Louvre. Click en una pieza para acercarte, girarla y leer su ficha. Modelos optimizados con Draco y WebP, y render estable a 30 fps.',
+    stack: 'Three.js, Astro, TypeScript, gltf-transform',
+    role: 'Proyecto Frontend 3D',
+    github: 'https://github.com/JhonRiv21/Museum',
+    page: 'https://museum.riverogz.com/'
+  },
   {
     image: RadarVid,
     name: 'Radar',
